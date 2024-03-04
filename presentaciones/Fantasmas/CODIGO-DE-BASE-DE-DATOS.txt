@@ -23,9 +23,8 @@
 				<p>Hidalgo Lira Almir Alier</p>
 				<p>Hernandez Hernadez Daniel</p>
 				<p>López García Axel Steven</p>
-				<p>Bustos Olivares Mara Naomi</p>
-				<p>Trejo Jimenez Yoav Zipacna</p>
-					
+                                <p>Bustos Olivares Mara Naomi</p>
+                                <p>Trejo Jimenez Yoav Zipacna</p>
 			</section>
 			<section>
 				<section>

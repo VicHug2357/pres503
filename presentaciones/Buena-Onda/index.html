@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Exposición Unidad 3</title>
+
+		<link rel="stylesheet" href="../../dist/reset.css">
+		<link rel="stylesheet" href="../../dist/reveal.css">
+		<link rel="stylesheet" href="../../dist/theme/black.css">
+
+		<link rel="stylesheet" href="../../plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section>
+					<img src="Assests/LogoUPT.png" alt="">
+					<h1 style="font-size: larger; color: blueviolet;">Exposición Clases de Relación</h1>
+					<h2>Ingeniería en Sistemas</h2>
+				</section>
+				
+				<section>
+					<h1 style="font-size: larger; color: blueviolet;">Integrantes</h1>
+					<li>Eber Aldair Badillo Castillo</li>
+					<li>José Luis Gress Vargas</li>
+					<li>Yonatan Gabriel Fernández Domínguez</li>
+					<li>Jesús Oswaldo Martínez Rojo</li>
+					<li>Jorge Adrián Jimenez Morales</li>
+				</section>
+
+				<section style="background-color: rgb(24, 81, 81); width: 100vw; height: 100vh; position: absolute; top: 0; left: 0; right: 0; bottom: 0; overflow: hidden; margin-top: 0px; margin-bottom: 0px; margin: 0px;">
+					<img src="Assests/LogoUPT.png" alt="" style="width: 200pt; margin-top: 100pt; padding-right: 800pt;">
+					<h1 style="font-size: 50pt;">Clases de Relación</h1>
+					<p>* Persistentes</p>
+					<p>* Temporales</p>
+				</section>
+
+				<section>
+					<h1 style="font-size: 60pt;">Introducción</h1>
+					<p style="font-size: 20pt;">
+						En el mundo de la informática, las relaciones entre entidades son fundamentales para el almacenamiento y la gestión de datos. Estas relaciones pueden clasificarse en dos categorías principales: persistentes y temporales. La distinción entre ambas radica en la duración de la relación y su impacto en el estado del sistema.
+					</p>
+					<p style="font-size: 20pt;">
+						Las <strong style="color: aqua;">relaciones persistentes</strong> son aquellas que se mantienen a lo largo del tiempo y sobreviven a la ejecución del programa o la transacción. Estas relaciones modifican el estado del sistema de forma permanente y son esenciales para la estructura y la integridad de los datos. Un ejemplo de una relación persistente es la que existe entre un cliente y un pedido en un sistema de comercio electrónico.
+					</p>
+					<p style="font-size: 20pt;">
+						En contraste, <strong style="color: aqua;">relaciones temporales</strong>  son aquellas que existen solo durante un período de tiempo limitado y desaparecen una vez que se cumple su propósito. Estas relaciones no modifican el estado del sistema de forma permanente y son útiles para tareas específicas como la comparación de datos o el procesamiento temporal de información. Un ejemplo de una relación temporal es la que existe entre un usuario y un carrito de compra en un sistema de comercio electrónico.
+					</p>
+				</section>
+<!--Relaciones Persistentes-->
+				<section>
+					<h1 style="font-size: 50pt; color: aqua;">Relaciones Persistentes</h1>
+					<p style="font-size: 20pt;">Las relaciones persistentes en las bases de datos son aquellas que se mantienen a lo largo del tiempo y sobreviven a la ejecución del programa o la transacción. Modifican el estado del sistema de forma permanente. Estas relaciones almacenan información sobre entidades y sus conexiones de forma duradera, permitiendo un acceso y recuperación eficientes.</p>
+					<li style="font-size: 20pt;">Duración: Permanentes.</li>
+					<li style="font-size: 20pt;">Impacto en el estado del sistema: Modifican el estado del sistema.</li>
+					<li style="font-size: 20pt;">Uso: Modelar entidades y relaciones que son permanentes.</li>
+				</section>
+
+				<section>
+					<h1 style="font-size: 50pt;">Relaciones Persistentes</h1>
+					<li>Relación Uno a Uno (1:1)</li>
+					<li>Relación Uno a Muchos (1:N)</li>
+					<li>Relación Muchos a Muchos (N:N)</li>
+					<li>Relación Reflexiva</li>
+					<li>Relación Asociativa</li>
+				</section>
+<!--Relación 1:1-->
+				<section>
+					<h1 style="font-size: 30pt;">Relaciones Persistentes</h1>
+					<h2 style="font-size: 25pt;">Relación Uno a Uno</h2>
+					<li style="font-size: 20pt;">Definición: Una entidad en una tabla se relaciona con una única entidad en otra tabla.</li>
+					<li style="font-size: 20pt;">Ejemplo: Un cliente tiene una única cuenta de usuario.</li>
+					<li style="font-size: 20pt;">Importancia: Permite un almacenamiento eficiente de datos relacionados sin redundancia.</li>
+					<img src="Assests/Relación1a1Persistente.png" alt="">
+				</section>
+<!--Relación 1:N-->
+				<section>
+					<h1 style="font-size: 30pt;">Relaciones Persistentes</h1>
+					<h2 style="font-size: 25pt;">Relación Uno a Muchos</h2>
+					<li style="font-size: 20pt;">Definición: Una entidad en una tabla se relaciona con múltiples entidades en otra tabla.</li>
+					<li style="font-size: 20pt;">Ejemplo: Un cliente tiene múltiples pedidos.</li>
+					<li style="font-size: 20pt;">Importancia: Permite organizar datos jerárquicamente y facilita la agregación de datos. Además, permite modelar relaciones de tipo "categoría" y facilita la búsqueda y el filtrado de datos.</li>
+					<img src="Assests/Relación1aNPersistente.png" alt="">
+				</section>
+<!--Relación N:M-->
+				<section>
+					<h1 style="font-size: 30pt;">Relaciones Persistentes</h1>
+					<h2 style="font-size: 25pt;">Relación Muchos a Muchos</h2>
+					<li style="font-size: 20pt;">Definición: Múltiples entidades en una tabla se relacionan con múltiples entidades en otra tabla.</li>
+					<li style="font-size: 20pt;">Ejemplo: Múltiples estudiantes asisten a múltiples clases.</li>
+					<li style="font-size: 20pt;">Importancia: Permite modelar relaciones complejas entre entidades y facilita la gestión de datos interconectados.</li>
+					<img src="Assests/RelaciónNaNPersistente.gif" alt="">
+				</section>
+<!--Relación Reflexiva-->
+				<section>
+					<h1 style="font-size: 30pt;">Relaciones Persistentes</h1>
+					<h2 style="font-size: 25pt;">Relación Reflexiva</h2>
+					<li style="font-size: 20pt;">Definición: Una entidad se relaciona consigo misma.</li>
+					<li style="font-size: 20pt;">Ejemplo: Un empleado tiene un supervisor que también es un empleado.</li>
+					<li style="font-size: 20pt;">Importancia: Permite modelar jerarquías y relaciones cíclicas.</li>
+					<img src="Assests/RelaciónReflexiva.png" alt="">
+				</section>
+<!--Relación Asociativa-->
+				<section>
+					<h1 style="font-size: 30pt;">Relaciones Persistentes</h1>
+					<h2 style="font-size: 25pt;">Relación Asociativa</h2>
+					<li style="font-size: 20pt;">Definición: Una entidad adicional se utiliza para conectar dos o más entidades principales.</li>
+					<li style="font-size: 20pt;">Ejemplo: La entidad "Escribir" conecta la entidad "Libro" con la entidad "Autor".</li>
+					<li style="font-size: 20pt;">Importancia: Permite modelar relaciones complejas que no se pueden representar con relaciones simples.</li>
+					<img src="Assests/RelaciónAsociativa.gif" alt="" style="background-color: white; width: 400pt;">
+				</section>
+<!--Relaciones Persistentes-->
+				<section>
+					<h1 style="font-size: 50pt;">Relaciones Temporales</h1>
+					<p style="font-size: 20pt;">Las relaciones temporales en las bases de datos son aquellas que existen solo durante un período de tiempo limitado y desaparecen una vez que se cumple su propósito. No modifican el estado del sistema de forma permanente. Estas relaciones capturan información sobre entidades y sus conexiones durante un intervalo específico, permitiendo un análisis y seguimiento de cambios a lo largo del tiempo.</p>
+					<li style="font-size: 20pt;">Duración: Temporales.</li>
+					<li style="font-size: 20pt;">Impacto en el estado del sistema: No modifican el estado del sistema.</li>
+					<li style="font-size: 20pt;">Uso: Modelar entidades y relaciones que son temporales.</li>
+				</section>
+
+				<section>
+					<h1 style="font-size: 50pt;">Relaciones Temporales</h1>
+					<li>Temporalmente Simple</li>
+					<li>Válida Temporal</li>
+					<li>Histórica Temporal</li>
+				</section>
+<!--Relación Temporalmente Simple-->
+				<section>
+					<h1 style="font-size: 30pt;">Relaciones Temporales</h1>
+					<h2 style="font-size: 25pt;">Relación Temporalmente Simple</h2>
+					<li style="font-size: 20pt;">Definición: Una relación que existe durante un período de tiempo específico.</li>
+					<li style="font-size: 20pt;">Ejemplo: La relación entre un estudiante y un curso durante un semestre.</li>
+					<li style="font-size: 20pt;">Importancia: Permite modelar eventos y actividades que tienen una duración limitada.</li>
+					<img src="Assests/RelaciónTemporalSimple.png" alt="" style="background-color: white; width: 400pt;">
+				</section>
+<!--Relación Válida Temporal-->
+				<section>
+					<h1 style="font-size: 30pt;">Relaciones Temporales</h1>
+					<h2 style="font-size: 25pt;">Relación Válida Temporal</h2>
+					<li style="font-size: 20pt;">Definición: Una relación que es válida dentro de un período de tiempo específico.</li>
+					<li style="font-size: 20pt;">Ejemplo: La relación entre un empleado y su cargo durante un período de empleo.</li>
+					<li style="font-size: 20pt;">Importancia: Permite modelar cambios en las relaciones a lo largo del tiempo.</li>
+					<img src="Assests/RelaciónVálidaTemporal.webp" alt="" style="background-color: white; width: 400pt;">
+				</section>
+<!--Relación Histórica Temporal-->
+				<section>
+					<h1 style="font-size: 30pt;">Relaciones Temporales</h1>
+					<h2 style="font-size: 25pt;">Relación Histórica Temporal</h2>
+					<li style="font-size: 20pt;">Definición: Una relación que registra el historial de cambios en una entidad a lo largo del tiempo.</li>
+					<li style="font-size: 20pt;">Ejemplo: El historial de cambios en la dirección de un cliente.</li>
+					<li style="font-size: 20pt;">Importancia: Permite realizar un seguimiento del historial de cambios y analizar datos que varían a lo largo del tiempo.</li>
+					<img src="Assests/RelaciónHistóricaTemporal.webp" alt="" style="background-color: white; width: 400pt;">
+				</section>
+
+				<section>
+					<a href="../../index.html"><h1>Volver a los temas</h1></a>
+				</section>
+			</div>
+		</div>
+
+		<script src="../../dist/reveal.js"></script>
+		<script src="../../plugin/notes/notes.js"></script>
+		<script src="../../plugin/markdown/markdown.js"></script>
+		<script src="../../plugin/highlight/highlight.js"></script>
+		<script>
+
+			Reveal.initialize({
+				hash: true,
+
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
